@@ -1,0 +1,19 @@
+package Task_9;
+
+public class Zoo {
+    private Animal[] animals = new Animal[0];
+
+    public void addAnimal(Animal animal) {
+        Animal[] newAnimals = new Animal[animals.length + 1];
+        for (int i = 0; i < animals.length; i++) {
+            newAnimals[i] = animals[i];
+        }
+        newAnimals[newAnimals.length - 1] = animal;
+
+        animals = newAnimals;
+    }
+
+    public Animal[] getAnimals() {
+        return animals;
+    }
+}
